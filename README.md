@@ -74,26 +74,26 @@ public class Main {
     public static void main(String[] args) {
         Subject messageService = new Subject();
 
-        Device phone = new Device("Phone");
-        Device laptop = new Device("Laptop");
-        Device tablet = new Device("Tablet");
+        Device phone = new Device("Teléfono");
+        Device laptop = new Device("Portátil");
+        Device tablet = new Device("Tableta");
 
-        // Se suscribe a los dispositivos
+        // Se subscribe a los dispositivos
         messageService.subscribe(phone);
         messageService.subscribe(laptop);
 
         // Envia notificación a todos los dispositivos
-        messageService.notifyObservers("You have a new message!");
+        messageService.notifyObservers("¡Tienes un nuevo mensaje!");
 
         // Se des subscribe del dispositivo phone
         messageService.unsubscribe(phone);
 
         // Envia otra notificación
-        messageService.notifyObservers("Another message has arrived!");
+        messageService.notifyObservers("¡Ha llegado otro mensaje!");
 
         // Agrega una nueva suscripción
         messageService.subscribe(tablet);
-        messageService.notifyObservers("Tablet joined the notifications!");
+        messageService.notifyObservers("¡La tableta se unió a las notificaciones!");
     }
 }
 ```
@@ -161,10 +161,10 @@ public class Main {
         TaskManager taskManager = new TaskManager();
         TaskInvoker taskInvoker = new TaskInvoker();
 
-        Command createTask = new CreateTaskCommand(taskManager, "Task 1");
-        Command editTask = new EditTaskCommand(taskManager, "Task 1", "Updated Task 1");
-        Command deleteTask = new DeleteTaskCommand(taskManager, "Updated Task 1");
-        Command completeTask = new CompleteTaskCommand(taskManager, "Task 1");
+        Command createTask = new CreateTaskCommand(taskManager, "Tarea 1");
+        Command editTask = new EditTaskCommand(taskManager, "Tarea 1", "Actualiza tarea 1");
+        Command deleteTask = new DeleteTaskCommand(taskManager, "Actualiza tarea 1");
+        Command completeTask = new CompleteTaskCommand(taskManager, "Tarea 1");
 
         // Ejecutar comandos
         taskInvoker.executeCommand(createTask);

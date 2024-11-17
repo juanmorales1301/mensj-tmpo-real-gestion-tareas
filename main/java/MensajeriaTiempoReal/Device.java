@@ -9,11 +9,11 @@ public class Device implements Observer {
 
     @Override
     public void update(String message) {
-        System.out.println("Device " + name + " received message: " + message);
+        System.out.println("Dispositivo " + name + " recibió el mensaje: " + message);
     }
 
     @Override
     public String toString() {
-        return "Device{" + "name='" + name + '\'' + '}';
+        return "Dispositivo{" + "nombre='" + name + '\'' + '}';
     }
 }
